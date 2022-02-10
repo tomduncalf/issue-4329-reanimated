@@ -7,6 +7,7 @@ import IntroText from './app/components/IntroText';
 import AddTaskForm from './app/components/AddTaskForm';
 import TaskList from './app/components/TaskList';
 import colors from './app/styles/colors';
+import {Box} from './app/components/Box';
 
 const ExerciseSchema = {
   name: 'Exercise',
@@ -187,6 +188,7 @@ function App() {
   return (
     <SafeAreaView style={styles.screen}>
       <View style={styles.content}>
+        <Box />
         <AddTaskForm onSubmit={handleAddTask} />
         {tasks.length === 0 ? (
           <IntroText />
